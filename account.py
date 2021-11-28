@@ -4,13 +4,17 @@
 
 print("Aqui está sua conta bancaria")
 
-def __name__(name):
+def __name__():
     name = input(print("Digite seu nome para continuar com o atendimento."))
+    if name == name:
+       name = print("Olá {}, Bem vindo ao aplicativo do seu banco".format(name))
+        
+__name__()
     
 
 
 def Abrir(abrir):
-    print("Olá, bem vindo ao seu aplicativo do banco")
+    print("Olá {}, bem vindo ao seu aplicativo do banco".format(__name__))
     
     j = input(print("Voce já tem uma conta?? Digite 1 para entrar na sua conta e 2 para Criar uma nova conta."))
     
@@ -19,5 +23,5 @@ def Abrir(abrir):
     else:
         print("Criando sua nova Conta")
         
-Abrir()
+Abrir(Abrir)
 
