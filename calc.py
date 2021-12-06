@@ -5,7 +5,8 @@
 ##        print("Bem-vindo {}".format(name))
 
 
-operacao = input ('''
+def Calc():
+    operacao = input ('''
 Escolha a operação desejavel
 Basta apenas escolher por operação
 + para Soma
@@ -13,27 +14,31 @@ Basta apenas escolher por operação
 * para Multiplicação
 / para Divisão                                    
                   ''')
+    num1 = int(input('EScolha seu primeiro número'))
+    num2 = int(input('Escolha seu segundo número'))
+    result = int(num1 + num2)
 
-num1 = int(input('EScolha seu primeiro número'))
-num2 = int(input('Escolha seu segundo número'))
-result = int(num1 + num2)
 
+    if operacao == '+':
+        print(f'{num1} + {num2} = ')
+        print(result)
 
-if operacao == '+':
-    print(f'{num1} + {num2} = ')
-    print(result)
-
-elif operacao == '-':
-    print(f'{num1} - {num2} = ')
-    print(result)
+    elif operacao == '-':
+        print(f'{num1} - {num2} = ')
+        print(result)
     
-elif operacao == '*':
-    print(f'{num1} * {num2} = ')
-    print(result)
+    elif operacao == '*':
+        print(f'{num1} * {num2} = ')
+        print(result)
     
-elif operacao == '/':
-    print(f'{num1} / {num2} = ')
-    print(result)
+    elif operacao == '/':
+        print(f'{num1} / {num2} = ')
+        print(result)
 
-else:
-    ('Você não colocou um operador valido')
+    else:
+        ('Você não colocou um operador valido')
+    
+    
+    
+    
+Calc()    
