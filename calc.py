@@ -5,31 +5,35 @@
 ##        print("Bem-vindo {}".format(name))
 
 
+operacao = input ('''
+Escolha a operação desejavel
+Basta apenas escolher por operação
++ para Soma
+- para Subtração
+* para Multiplicação
+/ para Divisão                                    
+                  ''')
+
+num1 = int(input('EScolha seu primeiro número'))
+num2 = int(input('Escolha seu segundo número'))
+result = int(num1 + num2)
 
 
-class Calc():
-    def __init__ (self, Soma: int, Sub: int, name: str):
-        self.Soma = Soma
-        self.Sub = Sub
-        self.name = name
-        
+if operacao == '+':
+    print(f'{num1} + {num2} = ')
+    print(result)
+
+elif operacao == '-':
+    print(f'{num1} - {num2} = ')
+    print(result)
     
-    def inicio (self):
-        i = str(input(print(f"Olá, Sou uma calculadora em Python"
-                            f"Me diga seu nome {self.name}")))
+elif operacao == '*':
+    print(f'{num1} * {num2} = ')
+    print(result)
     
+elif operacao == '/':
+    print(f'{num1} / {num2} = ')
+    print(result)
 
-    def Soma (self):
-        print(f"Então vamos a fazer a Soma Sr. {self.name}")
-    
-    def Sub (self):
-        print(f"Então vamos começar a fazer Subtração Sr. {self.name}")
-        
-print("Tudo certo")
-
-calculadora = Calc (Soma=(1)(4), Sub=(2)(6), name='rodrigo')
-
-
-
-
-
+else:
+    ('Você não colocou um operador valido')
